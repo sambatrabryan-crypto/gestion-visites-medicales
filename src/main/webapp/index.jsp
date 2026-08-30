@@ -154,7 +154,7 @@
 
     <header class="app-header">
         <div class="logo-icon"><i class="fas fa-heartbeat"></i></div>
-        <h1>Gestion des visites — Centre Médical</h1>
+        <h1>Gestion des visites de medicaments — Centre Médical</h1>
         <p>Médecins · Patients · Visites</p>
     </header>
 
