@@ -28,16 +28,15 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            junit 'target/surefire-reports/*.xml'
-            archiveArtifacts artifacts: 'target/*.jar', allowEmptyArchive: true
-        }
-        failure {
-            echo "Build en échec — voir la console Jenkins pour les détails."
-        }
-        success {
-            echo "Build réussi 🎉"
-        }
+   post {
+    always {
+        junit testResults: 'target/surefire-reports/*.xml', allowEmptyResults: true
+        archiveArtifacts artifacts: 'target/*.war', allowEmptyArchive: true
+    }
+    failure {
+        echo "Build en échec — voir la console Jenkins pour les détails."
+    }
+    success {
+        echo "Build réussi 🎉"
     }
 }
