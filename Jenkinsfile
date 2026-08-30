@@ -1,26 +1,26 @@
 pipeline {
     agent any
 
-    stages {
+    tools {
+        maven 'Maven3'
+    }
 
+    stages {
         stage('Clone') {
             steps {
                 git branch: 'main', url: 'https://github.com/sambatrabryan-crypto/gestion-visites-medicales.git'
             }
         }
-
         stage('Build') {
             steps {
                 bat "mvn clean compile"
             }
         }
-
         stage('Test') {
             steps {
                 bat "mvn test"
             }
         }
-
         stage('Package') {
             steps {
                 bat "mvn package"
