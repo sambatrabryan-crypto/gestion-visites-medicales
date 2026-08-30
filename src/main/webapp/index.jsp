@@ -180,7 +180,7 @@
             <div class="icon green"><i class="fas fa-calendar-check"></i></div>
             <div>
                 <h3>Visites</h3>
-                <p>Planifier et gérer les visites</p>
+                <p>Planifications  et gérar les visites</p>
             </div>
         </a>
 
