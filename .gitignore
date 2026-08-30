@@ -1,1 +1,39 @@
-/target/
+# Fichiers compilés
+*.class
+*.jar
+*.war
+*.ear
+target/
+bin/
+build/
+
+# Fichiers Eclipse
+.settings/
+.project
+.classpath
+*.iml
+*.iws
+*.ipr
+.idea/
+*.swp
+*.lock
+
+# Fichiers de logs
+*.log
+logs/
+
+# Fichiers de configuration sensibles
+application.properties
+*.properties
+
+# Base de données
+*.db
+*.sqlite
+*.h2.db
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+dependency-reduced-pom.xml
