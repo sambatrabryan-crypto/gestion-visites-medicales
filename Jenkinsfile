@@ -39,12 +39,11 @@ pipeline {
             }
         }
 
-                stage('Deploy') {
-            steps {
-                bat "mvn org.apache.tomcat.maven:tomcat7-maven-plugin:2.2:deploy"
-            }
-        }
-
+             stage('Deploy') {
+    steps {
+        bat "curl -u deployer:DeployPass123! -T target\\GestionVisites.war \"http://localhost:8082/manager/text/deploy?path=/GestionVisites&update=true\""
+    }
+}
         stage('Deploy to Nexus') {
             steps {
                 bat "mvn deploy -DskipTests"
