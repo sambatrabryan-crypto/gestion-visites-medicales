@@ -38,6 +38,12 @@ pipeline {
                 }
             }
         }
+
+        stage('Deploy') {
+            steps {
+                bat "mvn tomcat7:deploy"
+            }
+        }
     }
 
     post {
