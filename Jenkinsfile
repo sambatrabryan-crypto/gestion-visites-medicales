@@ -41,7 +41,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                bat "mvn tomcat7:deploy"
+                bat "mvn org.apache.tomcat.maven:tomcat7-maven-plugin:2.2:deploy"
             }
         }
     }
