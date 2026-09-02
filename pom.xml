@@ -58,20 +58,27 @@
 
     </dependencies>
 
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <build>
-    <finalName>GestionVisites</finalName>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.tomcat.maven</groupId>
-            <artifactId>tomcat7-maven-plugin</artifactId>
-            <version>2.2</version>
-            <configuration>
-                <url>http://localhost:8082/manager/text</url>
-                <server>tomcat-server</server>
-                <path>/GestionVisites</path>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
+        <finalName>GestionVisites</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>http://localhost:8082/manager/text</url>
+                    <server>tomcat-server</server>
+                    <path>/GestionVisites</path>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

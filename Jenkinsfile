@@ -39,9 +39,15 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+                stage('Deploy') {
             steps {
                 bat "mvn org.apache.tomcat.maven:tomcat7-maven-plugin:2.2:deploy"
+            }
+        }
+
+        stage('Deploy to Nexus') {
+            steps {
+                bat "mvn deploy -DskipTests"
             }
         }
     }
